@@ -4,7 +4,6 @@ let teamsAndHeros=Promise.all([
   fetch('json/heroes.json').then((response) => response.json()),
   fetch('json/teams.json').then((response) => response.json()),
 ]);
-
 teamsAndHeros.then(data=>{
     printTeamsAndHeroes(data[0],data[1]);
 });
